@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 export default function Footer() {
   return (
     <footer>
-      <Link to='/contacts'>
+      <Link to="contatti">
         <button className='a'>
-          Contacts
+          Contatti
         </button>
       </Link>
-      <Link to='/contribute'>
+      <Link to="supporta">
         <button className='a'>
-          Contribute
+          Supporta
         </button>
       </Link>
       <span>
-        &copy; All rights reserved 2023
+        &copy; diritti riservati 2023
       </span>
     </footer>
   );

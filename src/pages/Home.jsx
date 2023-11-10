@@ -2,13 +2,12 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <section id="home" className="title">
+    <section id="home">
       <h3>
-        My own personal dumpster.
+        ciliegia dischi
       </h3>
       <p>
-        AI art, music, proofs of concept. Dotfiles and silly
-        programs.
+        Etichetta indipendente con base a Milano.
       </p>
     </section>
   );

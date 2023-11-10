@@ -9,20 +9,24 @@ export default function Nav() {
           Home
         </button>
       </Link>
-      <a target="_blank" rel="noreferrer" className="button" href="https://open.spotify.com/artist/4SEMUz1c0Z8kEc9E9NbnS3">
-        Music
-      </a>
-      <a className="button" href="gallery">
-        Gallery
-      </a>
-      <Link to="cool-stuff">
+      <Link to="musica">
         <button>
-          Cool shit
+          Musica
         </button>
       </Link>
-      <Link to="blog">
+      <Link to="galleria">
         <button>
-          Blog
+          Galleria
+        </button>
+      </Link>
+      <Link to="eventi">
+        <button>
+          Eventi
+        </button>
+      </Link>
+      <Link to="store">
+        <button>
+          Negozio
         </button>
       </Link>
     </nav>
