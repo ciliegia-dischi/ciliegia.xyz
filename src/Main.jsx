@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Home from './pages/Home.jsx';
-import Musica from './pages/Musica.jsx';
+import Home from './pages/Home';
+import Musica from './pages/Musica';
 
 /* route components with url */
 const Main = () => {
