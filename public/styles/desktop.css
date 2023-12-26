@@ -1,0 +1,11 @@
+@media screen and (min-width: 1100px) {
+    section .content {
+        flex-flow: row nowrap;
+        gap: 1.8em;
+        padding: 2vh 0;
+    }
+
+    section#music iframe {
+        min-width: 50vw;
+    }
+}

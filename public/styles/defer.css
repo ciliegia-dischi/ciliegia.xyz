@@ -1,0 +1,68 @@
+@import 'icons.css';
+
+*::selection,
+a::selection,
+button::selection, input::selection {
+    color: #212d3b;
+    background-color: var(--highlight);
+}
+
+h5, p {
+    font-weight: 300;
+    font-family: 'Ubuntu', 'Lato', 'DM Sans', 'Helvetica Neue', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+h5 {
+    font-size: .75em;
+}
+
+p {
+    font-size: .8em;
+    letter-spacing: .2px;
+}
+
+button.a:hover {
+    text-decoration: underline;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(5vh);
+    visibility: hidden;
+    will-change: opacity, visibility;
+    transition: opacity 1.6s ease-out, transform .8s ease-out;
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+.box {
+    border: 1px solid var(--brdr-color);
+    border-radius: var(--brdr-radius);
+}
+
+section .inner-content {
+    min-width: 350px;
+    min-height: 350px;
+    border: 1px solid var(--brdr-color);
+    border-radius: var(--brdr-radius);
+}
+
+section#music .container:nth-of-type(even) .content {
+    flex-direction: row-reverse;
+}
+
+section#gallery .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+section#gallery .item {
+    width: 350px;
+    height: 350px;
+    border-radius: 5px;
+    background-size: cover;
+}

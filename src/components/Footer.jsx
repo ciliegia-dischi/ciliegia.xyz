@@ -1,19 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { showModal } from './Modal.jsx';
 
 export default function Footer() {
   return (
     <footer>
-      <Link to="contatti">
-        <button className='a'>
-          Contatti
-        </button>
-      </Link>
-      <Link to="supporta">
-        <button className='a'>
-          Supporta
-        </button>
-      </Link>
+      <button className='a' onClick={function() {showModal('#contatti')}}>
+        Contatti
+      </button>
+      <button className='a' onClick={function() {showModal('#supporta')}}>
+        Supporta
+      </button>
       <span>
         &copy; diritti riservati 2023
       </span>

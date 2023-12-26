@@ -2,7 +2,10 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
-import Musica from './pages/Musica';
+import Music from './pages/Music';
+import Gallery from './pages/Gallery';
+import Contacts from './modals/Contacts';
+import Support from './modals/Support';
 
 /* route components with url */
 const Main = () => {
@@ -11,8 +14,11 @@ const Main = () => {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='home' element={<Home/>} />
-        <Route path='musica' element={<Musica/>} />
+        <Route path='musica' element={<Music/>} />
+        <Route path='galleria' element={<Gallery/>} />
       </Routes>
+      <Contacts />
+      <Support />
     </main>
   );
 }

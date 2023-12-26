@@ -1,0 +1,110 @@
+@import 'btn-stars.css';
+
+header {
+    z-index: 10;
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+header nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3vw;
+    padding: var(--nav-padding-height) var(--nav-padding-width);
+    background-color: var(--header-bg);
+    transition: padding .1s, background-color .4s, box-shadow .2s;
+}
+
+header.active nav {
+    padding-top: calc(var(--nav-padding-height)*0.9);
+    background-color: var(--header-active-bg);
+    box-shadow: 10px 0 24px 3px var(--shadow);
+}
+
+header nav button,
+header nav a.button {
+    position: relative;
+    padding: 0 2vw;
+    height: var(--nav-btn-height);
+    border-style: solid;
+    border-color: transparent;
+    border-width: var(--brdr-width);
+    border-radius: var(--brdr-radius);
+    background-color: transparent;
+    color: var(--fg);
+    font-size: var(--font-size-1);
+    font-family: 'DM Sans', 'Ubuntu', 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background .4s,
+                color .2s,
+                border-color .1s,
+                box-shadow .1s,
+                letter-spacing .6s,
+                transform .2s;
+}
+
+nav button:hover,
+nav a.button:hover {
+    color: var(--primary);
+/*  background-color: var(--fg); */
+/*  background-image: linear-gradient(45deg, transparent, var(--fg)); */
+    border-color: var(--brdr-color);
+    letter-spacing: 1.2px;
+    cursor: var(--pointer);
+}
+
+nav button:hover:not(:active),
+nav a.button:hover:not(:active) {
+    box-shadow: 0 0 15px -4px var(--highlight);
+}
+
+nav a.button:hover {
+    text-decoration: none;
+}
+
+header nav button::after,
+header nav a.button::after {
+    --color: #7b3d1c44;
+    --padding: -3px;
+    --width: 2px;
+    --transition-time: .1s;
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: var(--width) solid var(--color);
+    border-radius: var(--brdr-radius);
+    min-width: 90%;
+    opacity: 0;
+    transition: opacity .3s, top var(--transition-time);
+}
+
+nav button:hover::after,
+nav a.button:hover::after {
+    top: var(--padding);
+    left: var(--padding);
+    right: var(--padding);
+    bottom: var(--padding);
+    min-width: 100%;
+    opacity: 1;
+}
+
+nav button:active,
+nav a.button:active {
+    transform: scale(.92);
+}

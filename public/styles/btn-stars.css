@@ -1,0 +1,170 @@
+.star-btn:not(:hover) .star {
+    opacity: 0;
+}
+
+a:not(:first-of-type) .star-btn :is(
+    .star.star-1,
+    .star.star-4
+) {
+    opacity: 0;
+}
+
+a:nth-of-type(odd) .star-btn :is(
+    .star.star-3
+) {
+    opacity: 0;
+}
+
+a:nth-of-type(even) .star-btn :is(
+    .star.star-4
+) {
+    opacity: 0;
+}
+
+a:nth(4) .star-btn :is(
+    .star.star-2
+) {
+    opacity: 0;
+}
+
+a:last-of-type .star-btn :is(
+    .star.star-6
+) {
+    opacity: 0;
+}
+
+.star.star-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star.star-2 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star.star-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star.star-4 {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all .8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star.star-5 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all .6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star.star-6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all .8s ease;
+}
+
+.star-btn:hover {
+  background: transparent;
+  color: var(--color);
+  box-shadow: 0 0 25px #fec1958c;
+}
+
+.star-btn:hover .star.star-1 {
+  position: absolute;
+  top: -30%;
+  left: -10%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.star-btn:hover .star.star-2 {
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.star-btn:hover .star.star-3 {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.star-btn:hover .star.star-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.star-btn:hover .star.star-5 {
+  position: absolute;
+  top: 25%;
+  left: 85%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.star-btn:hover .star.star-6 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.fil0 {
+  fill: #FFFDEF;
+}
