@@ -8,4 +8,9 @@
     section#music iframe {
         min-width: 50vw;
     }
+
+    .modal-window .dialog-container {
+        min-width: 500px;
+        min-height: 400px;
+    }
 }

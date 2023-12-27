@@ -1,23 +1,29 @@
-import Modal from '../components/Modal.jsx';
+import Modal from '../components/Modal';
+import Stars from '../components/Stars'
+
+function ContactLink(props) {
+  return (
+    <p>
+      <a href={props.href}>
+        <button className="star-btn">
+          <span>{props.children}</span>
+          <Stars />
+        </button>
+      </a>
+    </p>
+  );
+}
 
 export default function Contacts() {
   return (
-    <Modal id="contatti">
-      <p>
-        <a href="mailto:eventi@ciliegia.xyz">eventi</a>
-      </p>
-      <p>
-        <a href="mailto:crypto@ciliegia.xyz">x pagare in crypto</a>
-      </p>
-      <p>
-        <a href="mailto:cosenoiose@ciliegia.xyz">lamentele</a>
-      </p>
-      <p>
-        <a href="mailto:chiacchiere@ciliegia.xyz">chiacchiere e commenti</a>
-      </p>
-      <p>
-        <a href="mailto:questapartenonimportatantoarrivanotutteallostessoindirizzo@ciliegia.xyz">altro</a>
-      </p>
+    <Modal id="contatti" className="rt-brdr">
+      <nav>
+        <ContactLink href="mailto:eventi@ciliegia.xyz">eventi</ContactLink>
+        <ContactLink href="mailto:crypto@ciliegia.xyz">x pagare in crypto</ContactLink>
+        <ContactLink href="mailto:cosenoiose@ciliegia.xyz">lamentele</ContactLink>
+        <ContactLink href="mailto:chiacchiere@ciliegia.xyz">chiacchiere</ContactLink>
+        <ContactLink href="mailto:questapartenonimportatantoarrivanotutteallostessoindirizzo@ciliegia.xyz">altro</ContactLink>
+      </nav>
     </Modal>
   );
 }

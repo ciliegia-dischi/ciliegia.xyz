@@ -34,7 +34,7 @@
 .modal-window .dialog-box {
     position: relative;
     padding: 35px 50px 22px;
-    max-width: 550px;
+    width: 100%;
     font-family: "Inconsolata", "Dejavu Sans Mono", monospace;
     background-color: var(--alt-bg);
     border: 4px outset transparent;
@@ -45,22 +45,31 @@
 }
 
 .modal-window .dialog-container {
+    display: flex;
+    justify-content: stretch;
+}
+
+.modal-window:not(.rt-brdr) .dialog-container {
+    border: var(--border-width) solid var(--brdr-color);
+}
+
+.modal-window.rt-brdr .dialog-container {
     position: relative;
     background-color: transparent;
     overflow: hidden;
 }
 
-.modal-window .dialog-container:before {
+.modal-window.rt-brdr .dialog-container:before {
     background: var(--main-bg);
     -webkit-filter: blur(1px);
     filter: blur(2px) brightness(60%) contrast(95%);
 }
 
-.modal-window .dialog-container:after {
+.modal-window.rt-brdr .dialog-container:after {
     background: var(--main-bg);
 }
 
-.modal-window .dialog-container:before {
+.modal-window.rt-brdr .dialog-container:before {
 	box-sizing: border-box;
     content: '';
     z-index: -2;
@@ -80,7 +89,7 @@
     animation: rotate 4s linear infinite;
 }
 
-.modal-window .dialog-container:after {
+.modal-window.rt-brdr .dialog-container:after {
     content: '';
     z-index: -1;
     position: absolute;
@@ -99,17 +108,35 @@
     }
 }
 
+.modal-window button {
+    padding: 10px 12px;
+    background-color: transparent;
+    border-radius: var(--brdr-radius);
+    font-size: var(--font-size-1);
+}
+
+.modal-window button:not(:hover) {
+    border-color: transparent;
+}
+
+.modal-window a:hover {
+    text-decoration: none;
+}
+
 .modal-window .dialog-box .close-button {
     position: absolute;
     top: -3px;
     right: -3px;
-    padding: 5px;
     line-height: 1em;
     border-width: 2px 2px 2px 2px;
     border-style: solid;
-    border-color: var(--fg);
     color: var(--fg);
     background-color: transparent;
+    cursor: var(--cursor);
+}
+
+.modal-window .dialog-box .close-button:hover {
+    border-color: var(--fg);
 }
 
 .modal-window .dialog-box .nav-container {

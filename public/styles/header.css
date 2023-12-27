@@ -55,8 +55,8 @@ header nav a.button {
                 transform .2s;
 }
 
-nav button:hover,
-nav a.button:hover {
+header nav button:hover,
+header nav a.button:hover {
     color: var(--primary);
 /*  background-color: var(--fg); */
 /*  background-image: linear-gradient(45deg, transparent, var(--fg)); */

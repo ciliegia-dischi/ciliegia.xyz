@@ -7,7 +7,7 @@ export default function Support() {
   }
 
   return (
-    <Modal id="supporta">
+    <Modal id="supporta" className="rt-brdr">
       <p>
         Grazie, ci stai già supportando abbastanza ascoltandoci. &lt;3
       </p>
