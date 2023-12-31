@@ -1,5 +1,10 @@
 @import 'icons.css';
+@import 'music.css';
+@import 'gallery.css';
+@import 'events.css';
 @import 'contacts.css';
+@import 'newsletter.css';
+@import 'card-grid.css';
 
 *::selection,
 a::selection,
@@ -20,6 +25,10 @@ h5 {
 p {
     font-size: .8em;
     letter-spacing: .2px;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 .fade-in {
@@ -46,20 +55,4 @@ section .inner-content {
     min-height: 350px;
     border: 1px solid var(--brdr-color);
     border-radius: var(--brdr-radius);
-}
-
-section#music .container:nth-of-type(even) .content {
-    flex-direction: row-reverse;
-}
-
-section#gallery .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-section#gallery .item {
-    width: 350px;
-    height: 350px;
-    border-radius: 5px;
-    background-size: cover;
 }

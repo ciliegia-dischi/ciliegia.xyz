@@ -1,12 +1,12 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import { showModal } from './Modal.jsx';
 
 export default function Footer() {
   return (
     <footer>
-      <button className='a' onClick={function() {showModal('#contatti')}}>
+      <Link to="contatti">
         Contatti
-      </button>
+      </Link>
       <button className='a' onClick={function() {showModal('#supporta')}}>
         Supporta
       </button>

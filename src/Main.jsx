@@ -4,8 +4,9 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Music from './pages/Music';
 import Gallery from './pages/Gallery';
-import Contacts from './modals/Contacts';
-import Support from './modals/Support';
+import Events from './pages/Events';
+import Contacts from './pages/Contacts';
+import Support from './pages/Support';
 
 /* route components with url */
 const Main = () => {
@@ -16,8 +17,9 @@ const Main = () => {
         <Route path='home' element={<Home/>} />
         <Route path='musica' element={<Music/>} />
         <Route path='galleria' element={<Gallery/>} />
+        <Route path='eventi' element={<Events/>} />
+        <Route path='contatti' element={<Contacts/>} />
       </Routes>
-      <Contacts />
       <Support />
     </main>
   );

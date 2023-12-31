@@ -119,10 +119,6 @@
     border-color: transparent;
 }
 
-.modal-window a:hover {
-    text-decoration: none;
-}
-
 .modal-window .dialog-box .close-button {
     position: absolute;
     top: -3px;

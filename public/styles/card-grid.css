@@ -1,0 +1,14 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card-grid .item {
+    width: 350px;
+    height: 350px;
+    padding: 5px 15px;
+    border-radius: 1px;
+    background-color: #fff;
+    background-size: cover;
+    color: var(--fg);
+}

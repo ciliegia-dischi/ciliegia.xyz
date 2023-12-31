@@ -33,7 +33,7 @@ function Gallery(props) {
   const imagesDir = galleryItems[props.section];
 
   return(
-    <div id="gallery">
+    <div className="card-grid">
       {
         imagesDir.map((image, index) => (
           <GalleryItem key={index} src={image} />

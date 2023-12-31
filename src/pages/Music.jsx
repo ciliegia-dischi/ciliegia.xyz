@@ -1,5 +1,3 @@
-import React from 'react';
-
 function EmbeddedPlayer(props) {
   return (
     <div className="container">
@@ -8,14 +6,13 @@ function EmbeddedPlayer(props) {
                 className={"inner-content " + props.className}
                 style={{borderRadius: '12px'}}
                 src={"https://open.spotify.com/embed/" + props.type + "/" + props.id + "?utm_source=generator"}
-                width="100%" height="352"
-                frameBorder="0" allowfullscreen=""
+                frameBorder="0" allowFullScreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy">
         </iframe>
-        <text>
+        <div className="text">
           {props.children}
-        </text>
+        </div>
       </div>
     </div>
   );
@@ -112,11 +109,32 @@ function CiliegiaSuicidio() {
   );
 }
 
+function TCova() {
+  return (
+    <EmbeddedPlayer title="T-"
+                    type="artist" id="1ewmiU9gWEqVJOGCqGAaZz">
+      <h3>
+        T-
+      </h3>
+      <p>
+        musica
+      </p>
+      <MusicIcons
+        type="artist"
+        spotify="1ewmiU9gWEqVJOGCqGAaZz"
+        youtube=""
+        apple=""
+        tidal=""
+      />
+    </EmbeddedPlayer>
+  );
+}
+
 export default function Music() {
   return (
     <section id="music">
       <CiliegiaSuicidio />
-      <CiliegiaSuicidio />
+      <TCova />
     </section>
   );
 }

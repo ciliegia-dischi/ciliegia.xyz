@@ -1,0 +1,16 @@
+#contacts .content {
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 0;
+}
+
+#contacts .list {
+    display: flex;
+    align-items: center;
+    gap: .8em;
+    color: var(--highlight);
+}
+
+#contacts .sep {
+    font-size: .75em;
+}

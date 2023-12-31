@@ -1,0 +1,15 @@
+#music {
+    gap: 1em;
+}
+
+#music .container {
+    margin: 1em 0;
+}
+
+#music .container:nth-of-type(even) .content {
+    flex-direction: row-reverse;
+}
+
+#music .content iframe {
+    height: 352px;
+}

@@ -100,8 +100,6 @@ a:last-of-type .star-btn :is(
 }
 
 .star-btn:hover {
-  background: transparent;
-  color: var(--color);
   box-shadow: 0 0 25px #fec1958c;
 }
 

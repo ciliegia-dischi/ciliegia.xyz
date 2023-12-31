@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import Stars from './Stars'
 
@@ -34,11 +33,11 @@ export default function Nav() {
           Eventi
         </NavButton>
       </Link>
-      <Link to="store">
+      <a href="https://ciliegia.bigcartel.com">
         <NavButton className="store">
           Store
         </NavButton>
-      </Link>
+      </a>
     </nav>
   );
 }

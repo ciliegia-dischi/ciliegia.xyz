@@ -1,0 +1,7 @@
+#events {
+    --fg: #090909;
+}
+
+#events .content {
+    width: 100%;
+}
