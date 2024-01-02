@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom';
-import Stars from './Stars'
 
 function NavButton(props) {
   return (
-    <button className={"star-btn " + props.className}>
+    <button className={props.className}>
       <span>{props.children}</span>
-      <Stars />
     </button>
   );
 }

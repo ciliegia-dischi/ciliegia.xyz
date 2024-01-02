@@ -30,7 +30,6 @@
 /*  --main-bg: #924925; */
     --main-bg: #392320;
     --header-bg: transparent;
-    --header-active-bg: var(--gradient-1);
 
     --brdr-color: #cfcfcfdf;
     --brdr-width: 1px;
@@ -46,9 +45,16 @@
     --bg-image: url(../img/pfp.jpg);
     --bg-gradient: linear-gradient(
         -45deg,
-        var(--gradient-1),
+    /*  var(--gradient-1), */
         var(--gradient-2),
         var(--gradient-3)
+    );
+    --btn-gradient: linear-gradient(
+        -45deg,
+        transparent 50%,
+        color-mix(in srgb, var(--gradient-1), #ca7281),
+        color-mix(in srgb, var(--gradient-2), #c65368),
+        color-mix(in srgb, var(--gradient-3), #b23461)
     );
 
     --cursor: default;
@@ -89,7 +95,7 @@ body::before {
     background-image: var(--bg-image);
     background-size: cover;
     filter: blur(50px) saturate(50%);
-    opacity: .3;
+    opacity: .1;
     animation: gradient-fade 25s linear reverse infinite;
 }
 
