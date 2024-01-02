@@ -1,3 +1,9 @@
+.icon {
+    display: inline-block;
+    padding: 0;
+    background-size: cover;
+}
+
 .music-icons {
     display: flex;
     flex-flow: row nowrap;
@@ -9,10 +15,4 @@
     display: flex;
     border: 0px solid transparent;
     background-color: transparent;
-}
-
-.icon {
-    display: inline-block;
-    padding: 0;
-    background-size: cover;
 }

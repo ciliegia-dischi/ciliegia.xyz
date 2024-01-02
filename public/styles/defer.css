@@ -6,6 +6,16 @@
 @import 'newsletter.css';
 @import 'card-grid.css';
 
+:root {
+    --btn-gradient: linear-gradient(
+        -45deg,
+        transparent 50%,
+        color-mix(in srgb, var(--color1), #ca7281),
+        color-mix(in srgb, var(--color2), #c65368),
+        color-mix(in srgb, var(--color3), #b23461)
+    );
+}
+
 *::selection,
 a::selection,
 button::selection, input::selection {

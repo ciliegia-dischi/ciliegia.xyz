@@ -1,25 +1,23 @@
 function EmbeddedPlayer(props) {
   return (
-    <div className="container">
-      <div className="content">
-        <iframe title={props.title}
-                className={"inner-content " + props.className}
-                style={{borderRadius: '12px'}}
-                src={"https://open.spotify.com/embed/" + props.type + "/" + props.id + "?utm_source=generator"}
-                frameBorder="0" allowFullScreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy">
-        </iframe>
-        <div className="text">
-          {props.children}
-        </div>
+    <div className="player-container">
+      <iframe title={props.title}
+              className={"inner-content " + props.className}
+              style={{borderRadius: '12px'}}
+              src={"https://open.spotify.com/embed/" + props.type + "/" + props.id + "?utm_source=generator"}
+              frameBorder="0" allowFullScreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy">
+      </iframe>
+      <div className="text">
+        {props.children}
       </div>
     </div>
   );
 }
 
 function MusicIcon(props) {
-  const iconSize = "35px";
+  const iconSize = "32px";
   const iconsPath = "../img/icons/";
   const iconsExt = ".svg";
 
@@ -92,12 +90,9 @@ function CiliegiaSuicidio() {
   return (
     <EmbeddedPlayer title="ciliegia suicidio"
                     type="artist" id="4SEMUz1c0Z8kEc9E9NbnS3">
-      <h3>
+      <h4>
         ciliegia suicidio
-      </h3>
-      <p>
-        musica
-      </p>
+      </h4>
       <MusicIcons
         type="artist"
         spotify="4SEMUz1c0Z8kEc9E9NbnS3"
@@ -113,12 +108,9 @@ function TCova() {
   return (
     <EmbeddedPlayer title="T-"
                     type="artist" id="1ewmiU9gWEqVJOGCqGAaZz">
-      <h3>
+      <h4>
         T-
-      </h3>
-      <p>
-        musica
-      </p>
+      </h4>
       <MusicIcons
         type="artist"
         spotify="1ewmiU9gWEqVJOGCqGAaZz"
@@ -133,8 +125,12 @@ function TCova() {
 export default function Music() {
   return (
     <section id="music">
-      <CiliegiaSuicidio />
-      <TCova />
+      <div className="container">
+        <div className="content">
+          <CiliegiaSuicidio />
+          <TCova />
+        </div>
+      </div>
     </section>
   );
 }

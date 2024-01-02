@@ -3,13 +3,24 @@
 }
 
 #music .container {
-    margin: 1em 0;
+    margin: 2em 0 0 0;
 }
 
-#music .container:nth-of-type(even) .content {
-    flex-direction: row-reverse;
+section .player-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 350px;
 }
 
-#music .content iframe {
+section .player-container .text {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: .4em;
+    padding: .6em;
+}
+
+#music .player-container iframe {
     height: 352px;
 }

@@ -3,33 +3,27 @@
 @import 'modal.css';
 
 :root {
-    --dark-grey: #302226;
-    --grey: #393939;
     --dark: #201216;
-    --primary: #321C36;
+    --grey: #393939;
+    --dark-grey: #302226;
+    --light: #dfdfdf;
 
-    --fg: #dfdfdf;
-    --alt-fg: #cfcfcf;
-    --bg: var(--primary);
-/*  --alt-bg: #743E4C; */
-    --alt-bg: #4B2F36;
-    --shadow: var(--light-grey);
+    --color1: #392320;
+    --color2: #4B2F36;
+    --color3: #743E4C;
+/*  --color4: #623925; */
+/*  --color5: #924925; */
+
+    --primary: #321C36;
     --highlight: #d1aacb;
 
-/*  --gradient-1: #ca7281; */
-    --gradient-1: #ca7271;
-    --gradient-1: #392320;
-/*  --gradient-2: #c65368; */
-    --gradient-2: #c64368;
-    --gradient-2: #4B2F36;
-/*  --gradient-3: #b23461; */
-    --gradient-3: #b23451;
-    --gradient-3: #743E4C;
+    --fg: var(--light);
+    --alt-fg: #cfcfcf;
+    --bg: var(--primary);
+    --alt-bg: var(--color2);
+    --shadow: var(--grey);
 
-/*  --main-bg: #352326; */
-/*  --main-bg: #623925; */
-/*  --main-bg: #924925; */
-    --main-bg: #392320;
+    --main-bg: var(--color1);
     --header-bg: transparent;
 
     --brdr-color: #cfcfcfdf;
@@ -44,19 +38,6 @@
     --nav-padding-width: 3vh;
 
     --bg-image: url(../img/pfp.jpg);
-    --bg-gradient: linear-gradient(
-        -45deg,
-    /*  var(--gradient-1), */
-        var(--gradient-2),
-        var(--gradient-3)
-    );
-    --btn-gradient: linear-gradient(
-        -45deg,
-        transparent 50%,
-        color-mix(in srgb, var(--gradient-1), #ca7281),
-        color-mix(in srgb, var(--gradient-2), #c65368),
-        color-mix(in srgb, var(--gradient-3), #b23461)
-    );
 
     --cursor: default;
     --pointer: pointer;
@@ -76,8 +57,7 @@ body {
     flex-flow: column nowrap;
     width: 100vw;
     height: 100vh;
-    background-color: var(--gradient-1);
-    background-image: var(--bg-gradient);
+    background-color: var(--color3);
     background-size: cover;
     color: var(--fg);
     font-size: var(--font-size-0);
@@ -121,6 +101,10 @@ body::before {
     100% {
         transform: rotate(360deg);
     }
+}
+
+h4, p {
+    margin: 0;
 }
 
 .App-container {

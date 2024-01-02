@@ -9,10 +9,6 @@
         padding: 2vh 0;
     }
 
-    section#music iframe {
-        width: 675px;
-    }
-
     .modal-window .dialog-container {
         min-width: 500px;
         min-height: 400px;

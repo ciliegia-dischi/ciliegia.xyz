@@ -26,8 +26,8 @@ header nav {
 
 header.active nav {
     padding: calc(var(--nav-padding-height)*0.8) calc(var(--nav-padding-width)*0.9);
-    background-color: var(--gradient-3);
-    box-shadow: 0 0 15px 1px var(--shadow);
+    background-color: var(--color3);
+    box-shadow: 0 0 10px 1px var(--shadow);
 }
 
 header nav button,
@@ -52,7 +52,6 @@ header nav a.button {
                 color .2s,
                 border-color .1s,
                 box-shadow .1s,
-                letter-spacing .6s,
                 transform .2s;
 }
 
@@ -62,7 +61,6 @@ header nav a.button:hover {
 /*  background-image: linear-gradient(45deg, transparent, var(--fg)); */
     background-position: 0 0;
     border-color: var(--brdr-color);
-    letter-spacing: 1.2px;
     cursor: var(--pointer);
 }
 
