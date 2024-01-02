@@ -23,7 +23,7 @@ function GalleryItem(props) {
 
   return (
     <div key={props.key}
-         className={"item box " + (isVisible ? 'is-visible' : '')}
+         className={"item " + (isVisible ? 'is-visible' : '')}
          style={{backgroundImage: "url('" + props.src + "')"}}
          ref={domRef} />
   );

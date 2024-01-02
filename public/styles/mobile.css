@@ -1,4 +1,8 @@
 @media screen and (max-width: 1100px) {
+    section .container {
+        padding: 0px 10px;
+    }
+
     section .content {
         flex-flow: column nowrap;
         gap: 5vh;

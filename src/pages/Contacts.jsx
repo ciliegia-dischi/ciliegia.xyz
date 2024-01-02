@@ -21,13 +21,11 @@ function ContactList() {
     <div className="list">
       <ContactLink href="mailto:eventi@ciliegia.xyz">eventi</ContactLink>
       <ContactSeparator />
-      <ContactLink href="mailto:crypto@ciliegia.xyz">x pagare in crypto</ContactLink>
-      <ContactSeparator />
-      <ContactLink href="mailto:cosenoiose@ciliegia.xyz?subject=Blah%20blah:">lamentele</ContactLink>
+      <ContactLink href="mailto:crypto@ciliegia.xyz">pagare con crypto</ContactLink>
       <ContactSeparator />
       <ContactLink href="mailto:chiacchiere@ciliegia.xyz">feedback</ContactLink>
       <ContactSeparator />
-      <ContactLink href="mailto:questapartenonimportatantoarrivanotutteallostessoindirizzo@ciliegia.xyz">altro</ContactLink>
+      <ContactLink href="mailto:questapartenonimporta@ciliegia.xyz">altro</ContactLink>
     </div>
   );
 }
@@ -38,7 +36,7 @@ export default function Contacts() {
       <div className="container">
         <div className="content">
           <ContactList />
-          <ContactLink href="percondividere:eventi@ciliegia.xyz">per condividere quello che volete</ContactLink>
+          <ContactLink href="mailto:percondividere@ciliegia.xyz">per condividere quello che volete</ContactLink>
         </div>
       </div>
     </section>

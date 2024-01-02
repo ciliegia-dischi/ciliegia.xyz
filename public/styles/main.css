@@ -8,7 +8,8 @@
     --dark: #201216;
     --primary: #321C36;
 
-    --fg: #cfcfcf;
+    --fg: #dfdfdf;
+    --alt-fg: #cfcfcf;
     --bg: var(--primary);
 /*  --alt-bg: #743E4C; */
     --alt-bg: #4B2F36;
@@ -78,7 +79,7 @@ body {
     background-color: var(--gradient-1);
     background-image: var(--bg-gradient);
     background-size: cover;
-    color: #dfdfdf;
+    color: var(--fg);
     font-size: var(--font-size-0);
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'Arial', 'Helvetica', sans-serif;
     overflow: hidden;
@@ -174,12 +175,10 @@ section,
 section .container {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
 }
 
 section .container {
     align-items: center;
-    padding: 40px 60px;
 }
 
 section .content {

@@ -14,7 +14,7 @@ export function NewsletterForm() {
           <div id="mc_embed_signup_scroll">
             <h2>Se abbiamo novità ti scriviamo?</h2>
             <div className="indicates-required">
-              <span className="asterisk">*</span> campo richiesto
+              <span className="asterisk">*</span> campo obbligatorio
             </div>
             <div className="mc-field-group">
               <label htmlFor="mce-EMAIL">
@@ -24,7 +24,7 @@ export function NewsletterForm() {
               <span id="mce-EMAIL-HELPERTEXT" className="helper_text"></span>
             </div>
             <div className="mc-field-group input-group">
-              <strong>Email Format</strong>
+              <strong>Formato email</strong>
               <ul>
                 <li>
                   <input type="radio" name="EMAILTYPE" id="mce-EMAILTYPE0" value="html" checked="true" />

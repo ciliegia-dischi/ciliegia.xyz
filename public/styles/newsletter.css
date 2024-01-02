@@ -1,11 +1,13 @@
 #mc_embed_shell {
+    --fg: #090909;
+     --bg: color-mix(in srgb, #ca7281, #fff 95%);
      width: 100%;
 }
 
 #mc_embed_signup {
      padding: 10px 0 3px 0;
      color: var(--fg);
-     background: #fff;
+     background: var(--bg);
      font: 14px Helvetica, Arial, sans-serif;
      max-width: 800px;
 }

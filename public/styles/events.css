@@ -1,7 +1,8 @@
-#events {
-    --fg: #090909;
-}
-
 #events .content {
     width: 100%;
+}
+
+#events .card-grid .item {
+    width: 350px;
+    height: 350px;
 }
