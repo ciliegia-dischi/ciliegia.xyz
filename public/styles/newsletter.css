@@ -1,15 +1,19 @@
 #mc_embed_shell {
-    --fg: #090909;
-     --bg: color-mix(in srgb, #ca7281, #fff 95%);
-     width: 100%;
+    /* --fg: #090909; */
+    --form-bg: color-mix(
+    in srgb,
+    #9a7281,
+    var(--bg) 75%
+    );
+    width: 100%;
 }
 
 #mc_embed_signup {
-     padding: 10px 0 3px 0;
-     color: var(--fg);
-     background: var(--bg);
-     font: 14px Helvetica, Arial, sans-serif;
-     max-width: 800px;
+    padding: 10px 0 3px 0;
+    color: var(--fg);
+    background-color: var(--form-bg);
+    font: 14px Helvetica, Arial, sans-serif;
+    max-width: 800px;
 }
 
 #mc_embed_signup a {
@@ -17,9 +21,31 @@
 }
 
 #mc_embed_signup .indicates-required {
-     margin: 0 !important;
+    margin: 0 !important;
 }
 
 #mc_embed_signup .mc-field-group {
-     width: 100% !important;
+    width: 100% !important;
+}
+
+#mc_embed_signup input[type="email"]:focus {
+     outline: none;
+     text-indent: 1%;
+}
+
+#mc_embed_signup #mce-EMAIL:not(:focus) + .helper_text {
+     display: none;
+}
+
+#mc_embed_signup input + .helper_text {
+     margin-top: 5px;
+}
+
+#mc_embed_signup .view-archive {
+    margin: 1em .2em;
+}
+
+#mc_embed_signup #mc-embedded-subscribe:hover {
+     background-color: var(--fg);
+     color: var(--bg);
 }

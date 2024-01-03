@@ -20,8 +20,10 @@ export function NewsletterForm() {
               <label htmlFor="mce-EMAIL">
                 Email <span className="asterisk">*</span>
               </label>
-              <input type="email" name="EMAIL" className="required email" id="mce-EMAIL" required="" value="" />
-              <span id="mce-EMAIL-HELPERTEXT" className="helper_text"></span>
+              <input type="email" name="EMAIL" className="required email" id="mce-EMAIL" required="" />
+              <span id="mce-EMAIL-HELPERTEXT" className="helper_text">
+                Ti avviseremo prima di un evento o se esce qualcosa di nuovo.
+              </span>
             </div>
             <div className="mc-field-group input-group">
               <strong>Formato email</strong>
@@ -36,7 +38,7 @@ export function NewsletterForm() {
                 </li>
               </ul>
             </div>
-            <p>
+            <p className="view-archive">
               <a href="https://us12.campaign-archive.com/home/?u=fd8b9656ded6234ae7833c6df&amp;id=1e4055162c">
                 Vedi archivio.
               </a>

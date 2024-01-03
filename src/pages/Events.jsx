@@ -2,7 +2,7 @@ import { NewsletterForm } from '../components/Newsletter.jsx';
 
 function NessunEvento() {
   return (
-    <div className="item">
+    <div className="item-placeholder">
       <p>
         Non ci sono eventi in programma al momento.
       </p>

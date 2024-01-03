@@ -7,12 +7,12 @@ export default function Support() {
   }
 
   return (
-    <Modal id="supporta" className="rt-brdr">
+    <Modal id="supporta">
       <p>
-        Grazie, ci stai già supportando abbastanza ascoltandoci. &lt;3
+        Ci stai già supportando abbastanza ascoltandoci. &lt;3
       </p>
       <p>
-        Se vuoi aiutarci però puoi{" "}
+        Se vuoi aiutarci puoi{" "}
         <Link to="store" onClick={closeWindow}>comprare
         il nostro disco</Link>, oppure{" "}
         <a href="mailto:eventi@ciliegia.xyz">invitarci a

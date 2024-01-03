@@ -9,6 +9,11 @@ header {
 }
 
 header nav {
+    --padding-top: 2vh;
+    --padding-left: 3vh;
+    --padding-right: 3vh;
+    --padding-bottom: 2.5vh;
+
     position: sticky;
     top: 0;
     left: 0;
@@ -19,31 +24,40 @@ header nav {
     justify-content: flex-start;
     align-items: center;
     gap: 3vw;
-    padding: var(--nav-padding-height) var(--nav-padding-width);
-    background-color: var(--header-bg);
-    transition: padding .1s, background-color .4s, box-shadow .2s;
+    padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+    background-color: transparent;
+    transition: padding .1s, box-shadow .2s;
+}
+
+header:not(:has(~ main #home)) nav {
+    background-color: #59002a;
+    background-color: #380115;
+    background-color: #3b0229;
+    background-color: #1f0633;
+    background-color: #450a2a;
+    background-color: #4e0e3b;
 }
 
 header.active nav {
-    padding: calc(var(--nav-padding-height)*0.8) calc(var(--nav-padding-width)*0.9);
+    padding: calc(var(--padding-top)*0.8) calc(var(--padding-right)*0.9) calc(var(--padding-bottom)*0.8) calc(var(--padding-left)*0.9);
     background-color: var(--color3);
     box-shadow: 0 0 10px 1px var(--shadow);
 }
 
-header nav button,
-header nav a.button {
+header nav button {
+    --btn-height: 60px;
+    --brdr-width: 3px;
+    --padding-x: 2vw;
+
     position: relative;
-    padding: 0 2vw;
-    height: var(--nav-btn-height);
+    padding: 0 var(--padding-x);
+    height: var(--btn-height);
     border-style: solid;
     border-color: transparent;
-    border-width: var(--brdr-width);
+    border-width: 0 0 var(--brdr-width) 0;
     border-radius: var(--brdr-radius);
     background-color: transparent;
-    background-image: var(--btn-gradient);
-    background-size: 300% 200%;
-    background-position: 90% 50%;
-    color: var(--fg);
+    color: #cfcfcf;
     font-size: var(--font-size-1);
     font-family: 'DM Sans', 'Ubuntu', 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     letter-spacing: 1px;
@@ -55,25 +69,27 @@ header nav a.button {
                 transform .2s;
 }
 
-header nav button:hover,
-header nav a.button:hover {
-/*  background-color: var(--fg); */
-/*  background-image: linear-gradient(45deg, transparent, var(--fg)); */
-    background-position: 0 0;
-    border-color: var(--brdr-color);
-    cursor: var(--pointer);
+header nav button:hover {
+    cursor: pointer;
 }
 
-nav button:hover:not(:active),
-nav a.button:hover:not(:active) {
-    box-shadow: 0 0 15px -4px var(--highlight);
+header nav button::after {
+    --underline-width: 1.5;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: var(--padding-x);
+    width: calc(100% - var(--padding-x)*2);
+    height: 0;
+    transform: scale(0);
+    transform-origin: center;
+    background-color: var(--brdr-color);
+    opacity: 0;
+    transition: opacity .3s, transform .3s, height .6s;
 }
 
-nav a.button:hover {
-    text-decoration: none;
-}
-
-nav button:active,
-nav a.button:active {
-    transform: scale(.92);
+header nav button:hover::after {
+    height: var(--brdr-width);
+    opacity: 1;
+    transform: scaleX(var(--underline-width)) scaleY(1);
 }

@@ -1,7 +1,7 @@
 #contacts .content {
     flex-flow: column nowrap;
     align-items: center;
-    gap: 0;
+    gap: .3em;
 }
 
 #contacts .list {
@@ -12,5 +12,10 @@
 }
 
 #contacts .sep {
-    font-size: .75em;
+    display: inline-flex;
+}
+
+#contacts .sep::after {
+    content: '•';
+    font-size: .7em;
 }

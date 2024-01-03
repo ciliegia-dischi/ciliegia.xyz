@@ -49,63 +49,8 @@
     justify-content: stretch;
 }
 
-.modal-window:not(.rt-brdr) .dialog-container {
+.modal-window .dialog-container {
     border: var(--border-width) solid var(--brdr-color);
-}
-
-.modal-window.rt-brdr .dialog-container {
-    position: relative;
-    background-color: transparent;
-    overflow: hidden;
-}
-
-.modal-window.rt-brdr .dialog-container:before {
-    background: var(--main-bg);
-    -webkit-filter: blur(1px);
-    filter: blur(2px) brightness(60%) contrast(95%);
-}
-
-.modal-window.rt-brdr .dialog-container:after {
-    background: var(--main-bg);
-}
-
-.modal-window.rt-brdr .dialog-container:before {
-	box-sizing: border-box;
-    content: '';
-    z-index: -2;
-    position: absolute;
-    left: -10%;
-    top: -10%;
-    width: calc(180% + var(--border-width)*2);
-    height: calc(100% + var(--border-width)*2);
-    background-repeat: no-repeat;
-    background-size: 50% 50%, 50% 50%;
-    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-    background-image: linear-gradient(transparent, transparent),
-                      linear-gradient(transparent, var(--alt-bg), var(--main-bg)),
-                      linear-gradient(var(--highlight), var(--fg)),
-                      linear-gradient(transparent, transparent);
-    border-radius: 0;
-    animation: rotate 4s linear infinite;
-}
-
-.modal-window.rt-brdr .dialog-container:after {
-    content: '';
-    z-index: -1;
-    position: absolute;
-    top: var(--border-width);
-    left: var(--border-width);
-    right: var(--border-width);
-    bottom: var(--border-width);
-    width: calc(100% - var(--border-width)*2);
-    height: calc(100% - var(--border-width)*2);
-    border-radius: inherit;
-}
-
-@keyframes rotate {
-    100% {
-        transform: rotate(1turn);
-    }
 }
 
 .modal-window button {
@@ -121,18 +66,28 @@
 
 .modal-window .dialog-box .close-button {
     position: absolute;
-    top: -3px;
-    right: -3px;
+    top: -6px;
+    right: -6px;
     line-height: 1em;
-    border-width: 2px 2px 2px 2px;
-    border-style: solid;
+    padding: 6px 9px 6px 6px;
+    border-width: 0 0 2px 1px;
+    border-style: outset;
+    border-radius: 1.5px;
     color: var(--fg);
     background-color: transparent;
     cursor: var(--cursor);
+    transition: color .1s, background-color .1s, border-color .01s, opacity .05s;
+}
+
+.modal-window .dialog-box .close-button:not(:hover) {
+    border-color: transparent;
+    opacity: .6;
 }
 
 .modal-window .dialog-box .close-button:hover {
-    border-color: var(--fg);
+    color: var(--bg);
+    background-color: var(--brdr-color);
+    cursor: var(--pointer);
 }
 
 .modal-window .dialog-box .nav-container {

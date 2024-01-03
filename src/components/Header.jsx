@@ -4,7 +4,6 @@ import Nav from './Nav';
 function toggleElement(element, flag) {
   if (flag) {
     element.classList.add('active');
-    console.log(element.classList);
   }
   else {
     element.classList.remove('active');

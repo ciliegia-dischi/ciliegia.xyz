@@ -10,9 +10,7 @@ function ContactLink(props) {
 
 function ContactSeparator(props) {
   return (
-    <span className="sep">
-      •
-    </span>
+    <i className="sep" />
   );
 }
 
@@ -21,7 +19,7 @@ function ContactList() {
     <div className="list">
       <ContactLink href="mailto:eventi@ciliegia.xyz">eventi</ContactLink>
       <ContactSeparator />
-      <ContactLink href="mailto:crypto@ciliegia.xyz">pagare con crypto</ContactLink>
+      <ContactLink href="mailto:progetti@ciliegia.xyz">progetti</ContactLink>
       <ContactSeparator />
       <ContactLink href="mailto:chiacchiere@ciliegia.xyz">feedback</ContactLink>
       <ContactSeparator />
