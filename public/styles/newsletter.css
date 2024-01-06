@@ -1,10 +1,6 @@
 #mc_embed_shell {
     /* --fg: #090909; */
-    --form-bg: color-mix(
-    in srgb,
-    #9a7281,
-    var(--bg) 75%
-    );
+    --form-bg: var(--bg-alt);
     width: 100%;
 }
 
@@ -46,6 +42,6 @@
 }
 
 #mc_embed_signup #mc-embedded-subscribe:hover {
-     background-color: var(--fg);
+     background-color: #ffffff;
      color: var(--bg);
 }
