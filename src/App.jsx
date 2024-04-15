@@ -1,16 +1,36 @@
-import React from 'react';
-import Main from './Main';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
+// import Nav from './sections/Nav';
+// import Footer from './sections/Footer';
+import Home from './sections/Home';
+import Music from './sections/Music';
+import Gallery from './sections/Gallery';
+import Events from './sections/Events';
+import Contacts from './sections/Contacts';
+import Support from './sections/Support';
+
+const Main = () => {
+  return (
+    <main>
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='home' element={<Home/>} />
+        <Route path='musica' element={<Music/>} />
+        <Route path='galleria' element={<Gallery/>} />
+        <Route path='eventi' element={<Events/>} />
+        <Route path='contatti' element={<Contacts/>} />
+      </Routes>
+      <Support />
+    </main>
+  );
+}
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      {/*<Nav />*/}
       <Main />
-      <Footer />
+      {/*<Footer />*/}
     </div>
   );
 }
-
 export default App;
