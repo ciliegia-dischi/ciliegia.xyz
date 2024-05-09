@@ -4,7 +4,7 @@
 
 :root {
     --dark: #201216;
-    --dark-alt: #232129;
+    --dark-alt: #332129;
     --dark-grey: #3c3a3d;
     --dark-blue: #221C36;
     --grey: #393939;
@@ -27,7 +27,8 @@
     --fg-alt: var(--dark-alt);
 /*  --bg: #564148; */
 /*  --bg: #561F1F; */
-    --bg: var(--dark-alt);
+/*  --bg: var(--dark-alt); */
+    --bg: #43313f;
     --bg-alt: var(--dark-grey);
     --shadow: var(--grey);
 
