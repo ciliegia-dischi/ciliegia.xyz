@@ -8,7 +8,7 @@ export default function Home() {
               ciliegia dischi
             </h3>
             <p>
-              <a href="mailto:scrivi@ciliegia.xyz">scrivi@ciliegia.xyz</a>
+              <a href="mailto:scrivi@ciliegia.xyz">sscrivi@ciliegia.xyz</a>
             </p>
           </div>
         </div>
