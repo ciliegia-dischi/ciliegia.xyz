@@ -1,6 +1,0 @@
-- "open mail envelope" footer icon to open newsletter signup popup
-- look up/generate gradients for background
-- make navbar buttons fill with gradient on hover
-- gradient colors for navbar buttons/content headers
-  (respect box-shadow highlight for navbar btn)
-  (use footer link highlight for text header)
