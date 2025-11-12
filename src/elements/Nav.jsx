@@ -30,7 +30,7 @@ function Icons() {
 export default function Nav() {
   return (
     <nav className="main">
-      <p>ciliegia dischi</p>
+      <p className="home"><a href="%PUBLIC_URL%">ciliegia dischi</a></p>
       <p className="separator">&bull;</p>
       <Icons />
     </nav>
