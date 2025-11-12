@@ -1,9 +1,0 @@
-.card-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.card-grid .item {
-    padding: 5px 15px;
-    background-size: cover;
-}

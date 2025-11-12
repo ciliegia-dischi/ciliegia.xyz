@@ -1,16 +1,29 @@
 @media screen and (min-width: 1100px) {
-    section {
-        margin: .8em 1em;
-    }
+  section, nav.main {
+    margin: 0 30rem;
+  }
 
-    section .content {
-        flex-flow: row nowrap;
-        gap: 2.8em;
-        padding: 2vh 0;
-    }
+  nav.main {
+    gap: 1rem;
+    position: fixed;
+    padding: 1rem 0 .2rem;
+  }
 
-    .modal-window .dialog-container {
-        min-width: 400px;
-        min-height: 350px;
-    }
+  nav.main .icons {
+    gap: .5rem;
+  }
+
+  .content .focus {
+    width: 620px;
+    height: 496px;
+  }
+
+  .content .visual-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .content .visual-item .visual {
+    min-width: 300px;
+    width: 22%;
+  }
 }

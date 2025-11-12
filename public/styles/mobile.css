@@ -1,10 +1,25 @@
 @media screen and (max-width: 1100px) {
-    section {
-        margin: 0px 10px;
-    }
+  nav.main {
+    flex-flow: column nowrap;
+    gap: 3rem;
+    position: relative;
+    margin: 3rem;
+    padding: 4rem 0;
+  }
 
-    section .content {
-        flex-flow: column nowrap;
-        gap: 5vh;
-    }
+  nav.main .icons {
+    gap: 1rem;
+  }
+
+  nav.main .separator {
+    display: none;
+  }
+
+  .content .visual-item {
+    flex-direction: column;
+  }
+
+  .content .visual-item .visual {
+    width: 90%;
+  }
 }
