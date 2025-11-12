@@ -79,7 +79,11 @@ function Albums() {
         cd="">
         */}
         <text>
-          <a href="https://legno.bigcartel.com/product/ciliegia-suicidio-elnslsi">28/11/2025 (preorder)</a>
+          <a href="https://legno.bigcartel.com/product/ciliegia-suicidio-elnslsi"
+             target="_blank"
+             rel="noopener noreferrer">
+            28/11/2025 (preorder)
+          </a>
         </text>
       </Album>
       <Album
