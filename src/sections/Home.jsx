@@ -40,6 +40,9 @@ function Album(props) {
       className="album"
       img={props.img}
       title={props.title}>
+
+      {props.children}
+
       <div className="column">
         <Link href={props.spotify}>spoty</Link>
         <Link href={props.youtube}>yt</Link>
@@ -47,7 +50,7 @@ function Album(props) {
         <Link href={props.bandcamp}>bandcamp</Link>
       </div>
 
-      <div className="separator" />
+      <div className={props.separator ? props.separator : "separator"} />
 
       <div className="column">
         <Link href={props.vinile}>vinile</Link>
@@ -65,6 +68,8 @@ function Albums() {
       <Album
         img="img/artwork/elnslsi-cover.jpg"
         title="è la nostra storia la scriviamo insieme"
+        separator="null">
+        {/*
         spotify=""
         youtube=""
         video=""
@@ -72,6 +77,8 @@ function Albums() {
         vinile=""
         cassetta=""
         cd="">
+        */}
+        <p disabled><b>28/11/2025</b></p>
       </Album>
       <Album
         img="img/artwork/imostri-cover.jpg"
@@ -91,7 +98,7 @@ export default function Home() {
     <section id="home">
       <Header>ciliegia suicidio</Header>
       <Focus>
-        <VideoEmbed src="https://www.youtube.com/embed/aX-JUb2mWo4?si=4TQfLQsY1dX5fhih"
+        <VideoEmbed src="https://www.youtube.com/embed/DXc5sVovkzM"
                     title="" />
       </Focus>
       <Albums />

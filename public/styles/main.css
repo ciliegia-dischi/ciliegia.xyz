@@ -45,8 +45,8 @@ a:hover {
   transition: opacity .2s;
 }
 
-a[disabled] {
-  color: #666;
+*[disabled] {
+  color: #999;
   opacity: 0.5;
   cursor: default;
   user-select: none;
@@ -58,22 +58,6 @@ a[disabled]:hover {
 
 #root {
   width: 100%;
-}
-
-.background {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  font-size: 24px;
-  font-family: "Lato", "Roboto", sans-serif;
-  font-weight: 300;
-  opacity: .5;
-  filter: blur(.1rem);
-  overflow: hidden;
-  pointer-events: none;
 }
 
 main {
@@ -130,11 +114,7 @@ nav.main {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-}
-
-.content .visual-item .title {
-  max-width: 35ch;
-  cursor: default;
+  gap: 7rem;
 }
 
 .content .visual-item .visual {
@@ -149,6 +129,11 @@ nav.main {
   height: 100%;
 }
 
+.content .visual-item .title {
+  max-width: 35ch;
+  cursor: default;
+}
+
 .album .caption text {
   display: flex;
   justify-content: space-between;
@@ -161,13 +146,13 @@ nav.main {
   width: 100%;
 }
 
+.album .caption .column:last-child {
+  align-items: flex-end;
+}
+
 .album .caption .separator {
   margin: 1.1em;
   border-right: 2px solid #ccc6;
-}
-
-.album .caption .column:last-child {
-  align-items: flex-end;
 }
 
 .album .caption a {
@@ -178,4 +163,24 @@ nav.main {
 
 .album .caption a:not(:hover) {
   opacity: .8;
+}
+
+
+
+
+
+.background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 24px;
+  font-family: "Lato", "Roboto", sans-serif;
+  font-weight: 300;
+  opacity: .5;
+  filter: blur(.1rem);
+  overflow: hidden;
+  pointer-events: none;
 }

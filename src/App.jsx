@@ -1,4 +1,3 @@
-import Background from './elements/Background'; // eslint-disable-line
 import Nav from './elements/Nav';
 import Content from './sections/Content';
 
