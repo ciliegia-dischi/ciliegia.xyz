@@ -135,7 +135,7 @@ nav.main {
   cursor: default;
 }
 
-.album .caption text {
+.album .caption .links {
   display: flex;
   justify-content: space-between;
 }

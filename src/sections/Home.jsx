@@ -26,9 +26,7 @@ function VisualItem(props) {
         <h3 className="title">
           {props.title}
         </h3>
-        <text>
-          {props.children} 
-        </text>
+        {props.children} 
       </div>
     </div>
   );
@@ -43,20 +41,22 @@ function Album(props) {
 
       {props.children}
 
-      <div className="column">
-        <Link href={props.spotify}>spoty</Link>
-        <Link href={props.youtube}>yt</Link>
-        <Link href={props.video}>video</Link>
-        <Link href={props.bandcamp}>bandcamp</Link>
-      </div>
+      <div className="links">
+        <div className="column">
+          <Link href={props.spotify}>spoty</Link>
+          <Link href={props.youtube}>yt</Link>
+          <Link href={props.video}>video</Link>
+          <Link href={props.bandcamp}>bandcamp</Link>
+        </div>
 
-      <div className={props.separator ? props.separator : "separator"} />
+        <div className={props.separator ? props.separator : "separator"} />
 
-      <div className="column">
-        <Link href={props.vinile}>vinile</Link>
-        <Link href={props.cassetta}>cassetta</Link>
-        <Link href={props.cd}>cd</Link>
-        <Link href={props.download}>download</Link>
+        <div className="column">
+          <Link href={props.vinile}>vinile</Link>
+          <Link href={props.cassetta}>cassetta</Link>
+          <Link href={props.cd}>cd</Link>
+          <Link href={props.download}>download</Link>
+        </div>
       </div>
     </VisualItem>
   );
@@ -78,7 +78,9 @@ function Albums() {
         cassetta=""
         cd="">
         */}
-        <p disabled><b>28/11/2025</b></p>
+        <text>
+          <a href="https://legno.bigcartel.com/product/ciliegia-suicidio-elnslsi">28/11/2025 (preorder)</a>
+        </text>
       </Album>
       <Album
         img="img/artwork/imostri-cover.jpg"
