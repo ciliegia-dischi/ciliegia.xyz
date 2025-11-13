@@ -1,64 +1,17 @@
-import { Link, VideoEmbed } from '../components/Utils.jsx'
+import { VideoEmbed, Focus, Album } from '../components/Elements.jsx';
 
 function Header(props) {
   return (
-    <div className="header">
-      <h1>{props.children}</h1>
-    </div>
-  );
-}
-
-function Focus(props) {
-  return (
-    <div className="focus">
-      {props.children}
-    </div>
-  );
-}
-
-function VisualItem(props) {
-  return (
-    <div className={"visual-item " + props.className}>
-      <div className="visual">
-        <img src={props.img} alt="" />
-      </div>
-      <div className="caption">
-        <h3 className="title">
-          {props.title}
-        </h3>
-        {props.children} 
-      </div>
-    </div>
-  );
-}
-
-function Album(props) {
-  return (
-    <VisualItem
-      className="album"
-      img={props.img}
-      title={props.title}>
-
-      {props.children}
-
-      <div className="links">
-        <div className="column">
-          <Link href={props.spotify}>spoty</Link>
-          <Link href={props.youtube}>yt</Link>
-          <Link href={props.video}>video</Link>
-          <Link href={props.bandcamp}>bandcamp</Link>
-        </div>
-
-        <div className={props.separator ? props.separator : "separator"} />
-
-        <div className="column">
-          <Link href={props.vinile}>vinile</Link>
-          <Link href={props.cassetta}>cassetta</Link>
-          <Link href={props.cd}>cd</Link>
-          <Link href={props.download}>download</Link>
-        </div>
-      </div>
-    </VisualItem>
+    <header>
+      <h1>28/11/2025</h1>
+      <a href="https://legno.bigcartel.com/product/ciliegia-suicidio-elnslsi"
+         target="_blank"
+         rel="noopener noreferrer">
+        <button>
+          preorder
+        </button>
+      </a>
+    </header>
   );
 }
 
@@ -66,28 +19,21 @@ function Albums() {
   return (
     <div className="visual-items">
       <Album
-        img="img/artwork/elnslsi-cover.jpg"
+        img="/img/artwork/elnslsi-cover.jpg"
         title="è la nostra storia la scriviamo insieme"
-        separator="null">
+        separator="null"
+        vinile="https://legno.bigcartel.com/product/ciliegia-suicidio-elnslsi">
         {/*
         spotify=""
         youtube=""
         video=""
         bandcamp=""
-        vinile=""
         cassetta=""
         cd="">
         */}
-        <text>
-          <a href="https://legno.bigcartel.com/product/ciliegia-suicidio-elnslsi"
-             target="_blank"
-             rel="noopener noreferrer">
-            28/11/2025 (preorder)
-          </a>
-        </text>
       </Album>
       <Album
-        img="img/artwork/imostri-cover.jpg"
+        img="/img/artwork/imostri-cover.jpg"
         title="i mostri col cazzo che si nascondono sotto alle lenzuola"
         spotify="https://open.spotify.com/album/7LCf7e9ejfOnOqAE7oFSvJ?si=CrHYCvIqStm65Wop1FyGrw"
         youtube="https://youtube.com/playlist?list=OLAK5uy_kFQdz7Y9yQbY63d2H4UFIyb-VwEF2jFL0&si=Ejjd9zcE5cJM1dU7"
@@ -102,7 +48,7 @@ function Albums() {
 export default function Home() {
   return (
     <section id="home">
-      <Header>ciliegia suicidio</Header>
+      <Header />
       <Focus>
         <VideoEmbed src="https://www.youtube.com/embed/DXc5sVovkzM"
                     title="" />

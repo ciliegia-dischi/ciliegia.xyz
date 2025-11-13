@@ -1,5 +1,5 @@
-import Nav from './elements/Nav';
-import Content from './sections/Content';
+import { Footer } from './components/Panels.jsx';
+import Content from './sections/Content.jsx';
 
 export default function App() {
   return (
@@ -7,7 +7,7 @@ export default function App() {
       <main>
         <Content />
       </main>
-      <Nav />
+      <Footer />
     </div>
   );
 }

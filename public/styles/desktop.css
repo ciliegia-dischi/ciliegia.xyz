@@ -3,23 +3,27 @@
     margin: 0 30rem;
   }
 
-    nav.main {
+    footer {
       margin: 0 22%;
     }
 
-  nav.main {
+  footer {
     gap: 1rem;
     position: fixed;
     padding: 1rem 0 .2rem;
   }
 
-  nav.main .icons {
+  .icons {
     gap: .5rem;
   }
 
   .content .focus {
     width: 620px;
     height: 496px;
+  }
+
+  .content .visual-item {
+    gap: 7rem;
   }
 
   .content .visual-item:nth-child(even) {
