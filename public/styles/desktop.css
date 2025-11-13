@@ -17,7 +17,7 @@
     gap: .5rem;
   }
 
-  .content .focus {
+  .content .focus iframe {
     width: 620px;
     height: 496px;
   }
