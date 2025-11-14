@@ -20,7 +20,7 @@ function Icons() {
 export function Footer() {
   return (
     <footer>
-      <p className="home"><a href="%PUBLIC_URL%">ciliegia dischi</a></p>
+      <p className="home"><a href="/">ciliegia dischi</a></p>
       <p className="separator">&bull;</p>
       <Icons />
     </footer>
