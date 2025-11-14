@@ -1,5 +1,5 @@
+import Content from './Content.jsx';
 import { Footer } from './components/Panels.jsx';
-import Content from './sections/Content.jsx';
 
 export default function App() {
   return (

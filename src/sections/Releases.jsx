@@ -1,21 +1,6 @@
-import { VideoEmbed, Focus, Album } from '../components/Elements.jsx';
+import { Album } from '../components/Elements.jsx';
 
-function Header(props) {
-  return (
-    <header>
-      <h1>28/11/2025</h1>
-      <a href="https://legno.bigcartel.com/product/ciliegia-suicidio-elnslsi"
-         target="_blank"
-         rel="noopener noreferrer">
-        <button>
-          preorder
-        </button>
-      </a>
-    </header>
-  );
-}
-
-function Albums() {
+export default function Releases() {
   return (
     <div className="visual-items">
       <Album
@@ -42,18 +27,5 @@ function Albums() {
         cd="">
       </Album>
     </div>
-  );
-}
-
-export default function Home() {
-  return (
-    <section id="home">
-      <Header />
-      <Focus>
-        <VideoEmbed src="https://www.youtube.com/embed/DXc5sVovkzM"
-                    title="" />
-      </Focus>
-      <Albums />
-    </section>
   );
 }
