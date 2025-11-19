@@ -10,7 +10,7 @@ function Header(props) {
          target="_blank"
          rel="noopener noreferrer">
         <button>
-          preorder
+          preorder lp
         </button>
       </a>
     </header>
