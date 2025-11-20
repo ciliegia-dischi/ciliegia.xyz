@@ -50,7 +50,7 @@ a:hover {
 }
 
 button {
-  padding: 1em 2em;
+  padding: .9em 1.5em;
   border-radius: 5px;
   border: .25em solid var(--bg-color);
   outline: 1px solid var(--fg-color);
@@ -119,11 +119,6 @@ header {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-}
-
-header button {
-  font-size: 1.1rem;
-  font-weight: bold;
 }
 
 a.link {
@@ -200,6 +195,11 @@ a.link img.icon.invert {
 .content .visual-item :is(.title, h1, h2, h3) {
   margin: 0;
   max-width: 35ch;
+}
+
+.content .visual-item button.main {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .album .caption .links {

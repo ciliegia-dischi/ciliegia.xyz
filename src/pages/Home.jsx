@@ -7,7 +7,7 @@ function PreorderBtn(props) {
     <a href="https://legno.bigcartel.com/product/ciliegia-suicidio-elnslsi"
         target="_blank"
         rel="noopener noreferrer">
-      <button>
+      <button className="main">
         preorder lp
       </button>
     </a>
