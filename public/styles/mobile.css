@@ -11,16 +11,6 @@
     gap: 1rem;
   }
 
-  .content .focus iframe {
-    width: 70vw;
-  }
-
-  @media screen and (max-width: 850px) {
-    .content .focus iframe {
-      aspect-ratio: 16/9;
-    }
-  }
-
   footer .separator {
     display: none;
   }
@@ -30,6 +20,11 @@
     gap: 5rem;
   }
 
+  .content .visual-item.mobile-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .content iframe {
   .content .visual-item .visual {
     width: 90%;
   }

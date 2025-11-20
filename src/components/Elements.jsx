@@ -39,11 +39,13 @@ export function FaIcon(props) {
 
 export function VideoEmbed(props) {
   return (
-    <iframe src={props.src}
-            title={props.title}
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
+    <div className="video-wrapper">
+      <iframe src={props.src}
+              title={props.title}
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+              referrerpolicy="strict-origin-when-cross-origin" />
+    </div>
   );
 }
 
@@ -57,9 +59,14 @@ export function Focus(props) {
 
 export function VisualItem(props) {
   return (
-    <div className={"visual-item " + props.className}>
-      <div className="visual">
-        <img src={props.img} alt={props.title} />
+    <div className={"visual-item " + props.className +
+                    (props.mobileReverse ? " mobile-reverse" : "")}>
+      <div className={"visual " + (props.vid ? "vid" : "img")}>
+        {props.vid ?
+          <VideoEmbed src={props.vid} title={props.vidTitle} />
+        :
+          <img src={props.img} alt={props.title} />
+        }
       </div>
       <div className="caption">
         <h3 className="title">
