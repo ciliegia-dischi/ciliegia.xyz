@@ -57,7 +57,7 @@ button {
   background-color: var(--bg-color);
   color: var(--fg-color);
   cursor: pointer;
-  transition: background-color 50ms, color .5s, border-radius .1s;
+  transition: background-color 50ms, color .5s, border-radius .8s;
 }
 
 button:hover, button:active {
@@ -69,12 +69,16 @@ button:hover, button:active {
 
 *[disabled] {
   color: #999;
-  opacity: 0.5;
-  cursor: default;
   user-select: none;
 }
 
-a[disabled]:hover {
+*[disabled], *[disabled] button {
+  opacity: 0.6;
+  cursor: default;
+}
+
+a[disabled]:hover,
+*[disabled]:active button {
   opacity: 0.3;
 }
 
@@ -202,13 +206,22 @@ a.link img.icon.invert {
   font-weight: bold;
 }
 
-.album .caption .links {
+.album .caption .links,
+.album .caption .links button {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+}
+
+.album .caption .links {
   gap: 1em;
   width: 100%;
+}
+
+.album .caption .links button {
+  gap: .6em;
+  padding: .275em .6em;
 }
 
 .album .caption a {

@@ -21,6 +21,16 @@ export function Link(props) {
   }
 }
 
+export function Button(props) {
+  return (
+    <Link href={props.href}>
+      <button>
+        {props.children}
+      </button>
+    </Link>
+  );
+}
+
 export function Icon(props) {
   return (
     <Link href={props.href}>
@@ -95,26 +105,26 @@ export function Album(props) {
         <FaIcon href={props.video}
               icon={faVideo} />
       </div>
-    
+
       {props.children}
 
       <div className="links">
-        <Link href={props.vinile}>
+        <Button href={props.vinile}>
           <FontAwesomeIcon icon={faRecordVinyl} />
           <span>vinile</span>
-        </Link>
-        <Link href={props.cassetta}>
+        </Button>
+        <Button href={props.cassetta}>
           <img className="icon invert" src="/img/icons/cassette.svg" alt="" />
           <span>cassetta</span>
-        </Link>
-        <Link href={props.cd}>
+        </Button>
+        <Button href={props.cd}>
           <FontAwesomeIcon icon={faCompactDisc} />
           <span>cd</span>
-        </Link>
-        <Link href={props.download}>
+        </Button>
+        <Button href={props.download}>
           <FontAwesomeIcon icon={faDownload} />
           <span>download</span>
-        </Link>
+        </Button>
       </div>
     </VisualItem>
   );
