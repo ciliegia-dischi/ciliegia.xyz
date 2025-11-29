@@ -1,21 +1,35 @@
-import { Album } from '../components/Elements.jsx';
+import { VideoEmbed, Focus, Album } from '../components/Elements.jsx';
 
-export default function Releases() {
+function Videos() {
+  return (
+    <div className="visual-items">
+      <Focus>
+        <VideoEmbed src="https://www.youtube.com/embed/ETfp9Eg7eh4"
+                    title="" />
+      </Focus>
+      <Focus>
+        <VideoEmbed src="https://www.youtube.com/embed/DXc5sVovkzM"
+                    title="" />
+      </Focus>
+    </div>
+  );
+}
+
+function Albums() {
   return (
     <div className="visual-items">
       <Album
         img="/img/artwork/elnslsi-cover.jpg"
         title="è la nostra storia la scriviamo insieme"
         separator="null"
-        vinile="https://legno.bigcartel.com/product/ciliegia-suicidio-elnslsi">
-        {/*
-        spotify=""
-        youtube=""
-        video=""
+        spotify="https://open.spotify.com/album/3MoQJNSDmezhLg7oloH3pV"
+        youtube="https://www.youtube.com/watch?v=hJoQxk70avU&list=OLAK5uy_mN6vfCQ5eCe82RPKpwySgRUcv6CClelQ0"
         bandcamp=""
+        video="https://www.youtube.com/watch?v=DXc5sVovkzM&list=PL01W7MPmrPz24pEBCmK5CsSMCRTJFm22k&pp=gAQB"
+        vinile="https://legno.bigcartel.com/product/ciliegia-suicidio-elnslsi"
         cassetta=""
         cd="">
-        */}
+        {/*bandcamp="https://ciliegia.bandcamp.com/album/la-nostra-storia-la-scriviamo-insieme"*/}
       </Album>
       <Album
         img="/img/artwork/imostri-cover.jpg"
@@ -26,6 +40,15 @@ export default function Releases() {
         cassetta=""
         cd="">
       </Album>
+    </div>
+  );
+}
+
+export default function Releases() {
+  return (
+    <div className="visual-items">
+      <Videos />
+      <Albums />
     </div>
   );
 }

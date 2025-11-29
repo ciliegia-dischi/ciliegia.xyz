@@ -5,7 +5,10 @@ import { faSpotify, faYoutube, faBandcamp } from '@fortawesome/free-brands-svg-i
 export function Link(props) {
   if (props.href === "") {
     return (
-      <a className="link" disabled>{props.children}</a> // eslint-disable-line
+      // eslint-disable-next-line
+      <a className="link" title="torno subito" disabled>
+        {props.children}
+      </a>
     );
   }
 
@@ -24,7 +27,7 @@ export function Link(props) {
 export function Button(props) {
   return (
     <Link href={props.href}>
-      <button>
+      <button className={props.className}>
         {props.children}
       </button>
     </Link>
