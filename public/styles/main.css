@@ -212,6 +212,7 @@ a.link img.icon.invert {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  font-size: 1rem;
 }
 
 .album .caption .links {
